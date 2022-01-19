@@ -1,0 +1,97 @@
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  background: rgb(29, 28, 28);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+nav h3 {
+  font-size: 1.2rem;
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+ul button {
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+@media (max-width: 550px) {
+  ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: 5rem;
+    width: 60%;
+  }
+
+  .hamburger button {
+    border: none;
+    font: inherit;
+    padding: 0.5rem;
+    width: 55%;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    color: white;
+    display: block;
+    position: fixed;
+    top: 6%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    background: rgb(29, 28, 28);
+    width: 100%;
+    padding: 0;
+  }
+
+  .dropdown ul li {
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+    margin: 0;
+    padding-top: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  nav h3 {
+    margin-left: 1rem;
+  }
+
+  .hamburger button {
+    width: 70%;
+  }
+}

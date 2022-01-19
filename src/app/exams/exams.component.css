@@ -1,0 +1,70 @@
+.terms {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.terms select {
+  padding: 0.5rem;
+  border: 1px solid #dad1d1;
+  width: 60%;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.registration {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #eeeeee;
+  width: 80%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.available-exams form div,
+.unavailable-exams form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.available-exams form label,
+.unavailable-exams form label {
+  margin-top: 1rem;
+}
+
+.available-exams form input,
+.unavailable-exams form input {
+  margin-right: 0.5rem;
+}
+
+.save {
+  margin-top: 1rem;
+  font: inherit;
+  padding: 0.4rem;
+  width: 40%;
+  font-size: 0.8rem;
+  background: #eeeeee;
+  border: 1px solid #c4c1c1;
+}
+
+.saved {
+  background: rgb(57, 247, 57);
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 850px) {
+  .terms {
+    width: 70%;
+  }
+  .terms select {
+    width: 70%;
+  }
+
+  .registration {
+    flex-direction: column;
+    align-items: center;
+  }
+}

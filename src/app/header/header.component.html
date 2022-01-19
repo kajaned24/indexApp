@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <h3 routerLink="/">UNIVERSITY</h3>
+    <ul>
+      <li routerLink="/subjects">Subjects</li>
+      <button routerLink="/exams">Exam registration</button>
+    </ul>
+    <div class="dropdown" *ngIf="opened">
+      <ul>
+        <li routerLink="/subjects">Subjects</li>
+        <li routerLink="/exams">Exam registration</li>
+      </ul>
+    </div>
+    <div class="hamburger">
+      <button (click)="dropdown()">Menu</button>
+    </div>
+  </nav>
+</header>

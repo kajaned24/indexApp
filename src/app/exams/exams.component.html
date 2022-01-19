@@ -1,0 +1,48 @@
+<div class="terms">
+  <h2>Current terms available:</h2>
+  <select>
+    <option>January term</option>
+  </select>
+</div>
+
+<div class="registration">
+  <div class="available-exams">
+    <h3>Exams available for registration:</h3>
+    <form [formGroup]="form" (ngSubmit)="saveRegistration()">
+      <div formGroupName="subjects">
+        <label>
+          <input formControlName="math" type="checkbox" />Mathematics</label
+        >
+        <label>
+          <input
+            formControlName="programming"
+            type="checkbox"
+          />Programming</label
+        >
+        <label>
+          <input formControlName="systems" type="checkbox" />Systems</label
+        >
+        <label> <input formControlName="tech" type="checkbox" />Tech</label>
+      </div>
+
+      <div class="saved" *ngIf="saved">
+        <p>Changes saved</p>
+        <p *ngIf="registeredExams">
+          You registered {{ registeredExams.length }} subjects for this term
+        </p>
+      </div>
+
+      <button [disabled]="saved" type="submit" class="save">Save</button>
+    </form>
+  </div>
+
+  <div class="unavailable-exams">
+    <h3>Exams unavailable for registration:</h3>
+    <form>
+      <label> <input disabled type="checkbox" />Data Base</label>
+      <label> <input disabled type="checkbox" />Basics of CS</label>
+      <label><input disabled type="checkbox" /> OP Programming</label>
+      <label><input disabled type="checkbox" />Statistics</label>
+    </form>
+  </div>
+</div>
